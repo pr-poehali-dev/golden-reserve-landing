@@ -20,8 +20,7 @@ export default {
 		extend: {
 			fontFamily: {
 				'golos': ['Golos Text', 'sans-serif'],
-				'cormorant': ['Cormorant', 'serif'],
-				'bebas': ['Bebas Neue', 'sans-serif'],
+				'oswald': ['Oswald', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
