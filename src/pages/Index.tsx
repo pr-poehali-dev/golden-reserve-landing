@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Icon from '@/components/ui/icon';
 
-const HERO_IMAGE = 'https://cdn.poehali.dev/projects/e6f8dbee-d834-42c5-ae1c-2e6a15b8ec89/files/12a6f164-3907-46ec-b1a2-6c130397483d.jpg';
+const HERO_IMAGE = 'https://cdn.poehali.dev/projects/e6f8dbee-d834-42c5-ae1c-2e6a15b8ec89/files/61efdad5-9561-41bd-81c1-9f5a67714e28.jpg';
 
 function useReveal() {
   useEffect(() => {
@@ -163,10 +163,10 @@ export default function Index() {
       {/* HERO */}
       <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
-          <img src={HERO_IMAGE} alt="" className="w-full h-full object-cover" style={{ opacity: 0.22 }} />
+          <img src={HERO_IMAGE} alt="" className="w-full h-full object-cover" style={{ opacity: 0.55, filter: 'brightness(1.1) saturate(1.2)' }} />
           <div
             className="absolute inset-0"
-            style={{ background: 'linear-gradient(135deg, rgba(10,14,26,0.97) 0%, rgba(10,14,26,0.72) 55%, rgba(10,14,26,0.92) 100%)' }}
+            style={{ background: 'linear-gradient(180deg, rgba(10,14,26,0.72) 0%, rgba(10,14,26,0.45) 40%, rgba(10,14,26,0.82) 100%)' }}
           />
         </div>
 
@@ -192,13 +192,20 @@ export default function Index() {
             </div>
 
             <h1
-              className="font-cormorant font-bold text-5xl md:text-7xl leading-tight mb-6 animate-fade-in-up opacity-0-init"
-              style={{ animationDelay: '0.1s' }}
+              className="font-bebas animate-fade-in-up opacity-0-init"
+              style={{
+                animationDelay: '0.1s',
+                fontSize: 'clamp(3.5rem, 10vw, 8rem)',
+                lineHeight: 1.0,
+                letterSpacing: '0.02em',
+                marginBottom: '1.5rem',
+              }}
             >
-              <span className="text-foreground">Программа </span>
-              <span className="gold-text">преемничества</span>
-              <br />
-              <span className="text-foreground italic">«Золотой запас»</span>
+              <span className="text-foreground block">ПРОГРАММА</span>
+              <span className="gold-text block">ПРЕЕМНИЧЕСТВА</span>
+              <span className="text-foreground block" style={{ fontSize: '0.78em', letterSpacing: '0.12em', opacity: 0.9 }}>
+                «ЗОЛОТОЙ ЗАПАС»
+              </span>
             </h1>
 
             <p
@@ -231,7 +238,7 @@ export default function Index() {
             >
               {[['500+', 'участников программы'], ['87%', 'дошли до финала'], ['3 мес', 'средний срок до оффера']].map(([num, label]) => (
                 <div key={label}>
-                  <div className="font-cormorant font-bold text-3xl gold-text">{num}</div>
+                  <div className="font-bebas gold-text" style={{ fontSize: '2.5rem', letterSpacing: '0.04em', lineHeight: 1 }}>{num}</div>
                   <div className="text-sm mt-1" style={{ color: 'hsl(var(--muted-foreground))' }}>{label}</div>
                 </div>
               ))}
@@ -258,8 +265,8 @@ export default function Index() {
                 <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: '#E8B84B' }}>
                   О программе
                 </span>
-                <h2 className="font-cormorant font-bold text-4xl md:text-5xl mt-3 mb-6 text-foreground leading-tight">
-                  Кузница лидеров<br /><span className="gold-text italic">малого бизнеса</span>
+                <h2 className="font-bebas mt-3 mb-6 text-foreground" style={{ fontSize: 'clamp(2.8rem, 6vw, 4.5rem)', letterSpacing: '0.03em', lineHeight: 1.05 }}>
+                  КУЗНИЦА ЛИДЕРОВ<br /><span className="gold-text">МАЛОГО БИЗНЕСА</span>
                 </h2>
               </div>
               <div className="reveal" style={{ transitionDelay: '0.15s' }}>
@@ -314,8 +321,8 @@ export default function Index() {
             <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: '#E8B84B' }}>
               Что вы получаете
             </span>
-            <h2 className="font-cormorant font-bold text-4xl md:text-5xl mt-3 text-foreground">
-              Преимущества<br /><span className="gold-text italic">для преемника</span>
+            <h2 className="font-bebas mt-3 text-foreground" style={{ fontSize: 'clamp(2.8rem, 6vw, 4.5rem)', letterSpacing: '0.03em', lineHeight: 1.05 }}>
+              ПРЕИМУЩЕСТВА<br /><span className="gold-text">ДЛЯ ПРЕЕМНИКА</span>
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -352,8 +359,8 @@ export default function Index() {
             <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: '#E8B84B' }}>
               Как это работает
             </span>
-            <h2 className="font-cormorant font-bold text-4xl md:text-5xl mt-3 text-foreground">
-              Этапы<br /><span className="gold-text italic">отбора</span>
+            <h2 className="font-bebas mt-3 text-foreground" style={{ fontSize: 'clamp(2.8rem, 6vw, 4.5rem)', letterSpacing: '0.03em', lineHeight: 1.05 }}>
+              ЭТАПЫ<br /><span className="gold-text">ОТБОРА</span>
             </h2>
           </div>
           <div className="max-w-3xl mx-auto flex flex-col gap-4">
@@ -390,8 +397,8 @@ export default function Index() {
             <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: '#E8B84B' }}>
               Ответы
             </span>
-            <h2 className="font-cormorant font-bold text-4xl md:text-5xl mt-3 text-foreground">
-              Часто задаваемые<br /><span className="gold-text italic">вопросы</span>
+            <h2 className="font-bebas mt-3 text-foreground" style={{ fontSize: 'clamp(2.8rem, 6vw, 4.5rem)', letterSpacing: '0.03em', lineHeight: 1.05 }}>
+              ЧАСТО ЗАДАВАЕМЫЕ<br /><span className="gold-text">ВОПРОСЫ</span>
             </h2>
           </div>
           <div className="max-w-2xl mx-auto flex flex-col gap-3">
@@ -417,9 +424,9 @@ export default function Index() {
           style={{ background: 'radial-gradient(circle, rgba(201,150,42,0.22) 0%, transparent 70%)' }}
         />
         <div className="relative z-10 text-center px-6">
-          <div className="font-cormorant font-bold text-4xl md:text-5xl text-foreground mb-4">
-            Готовы стать частью<br />
-            <span className="gold-text italic">Золотого запаса?</span>
+          <div className="font-bebas text-foreground mb-4" style={{ fontSize: 'clamp(2.8rem, 6vw, 4.5rem)', letterSpacing: '0.03em', lineHeight: 1.05 }}>
+            ГОТОВЫ СТАТЬ ЧАСТЬЮ<br />
+            <span className="gold-text">ЗОЛОТОГО ЗАПАСА?</span>
           </div>
           <p className="mb-8 max-w-lg mx-auto" style={{ color: 'hsl(var(--muted-foreground))' }}>
             Оставьте заявку сегодня и получите обратную связь от HR-команды в течение 3 рабочих дней.

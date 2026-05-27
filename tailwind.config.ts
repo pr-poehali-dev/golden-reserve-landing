@@ -21,6 +21,7 @@ export default {
 			fontFamily: {
 				'golos': ['Golos Text', 'sans-serif'],
 				'cormorant': ['Cormorant', 'serif'],
+				'bebas': ['Bebas Neue', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
